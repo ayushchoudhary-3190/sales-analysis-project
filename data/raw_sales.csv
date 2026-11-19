@@ -1,0 +1,14 @@
+Transaction_ID,Date,Product_ID,Product_Name,Category,Brand,Quantity,Unit_Price,Discount,Region,Customer_ID,Store_ID
+TXN1001,2026-01-15,P001,Coca-Cola 500 ml,Beverages,Coca-Cola,2,40,5,West,C101,S001
+TXN1002,2026-01-15,P002,Pepsi 500 ml,Beverages,Pepsi,1,40,0,West,C102,S001
+TXN1003,2026-01-16,P003,Lays Classic 50 g,Snacks,Lays,3,20,10,South,C103,S004
+TXN1004,2026-01-16,P001, Coca-Cola 500 ml ,Beverages,Coca-Cola,1,40,5,West,C104,S001
+TXN1005,2026-01-17,P004,Sprite 500 ml,beverages,Sprite,2,40,0,North,C105,S002
+TXN1006,2026-01-17,P005,Kurkure 50 g,Snacks,Kurkure,2,20,120,East,C106,S003
+TXN1007,2026-01-18,P003,Lays Classic 50 g,Snacks,Lays,-2,20,0,South,C107,S004
+TXN1008,2026-01-18,P006,Amul Milk 1 L,Dairy,Amul,1,60,5,West,C108,S001
+TXN1009,,P002,Pepsi 500 ml,Beverages,Pepsi,2,40,0,West,C109,S001
+TXN1010,2026-01-19,P999,Unknown Product,Snacks,Unknown,1,50,0,South,C110,S004
+TXN1011,2026-01-19,,Mystery Product,Snacks,Unknown,1,30,0,East,C111,S003
+TXN1012,2026-01-20,P004,Sprite 500 ml,Beverages,Sprite,0,40,0,North,C112,S002
+TXN1003,2026-01-16,P003,Lays Classic 50 g,Snacks,Lays,3,20,10,South,C103,S004
