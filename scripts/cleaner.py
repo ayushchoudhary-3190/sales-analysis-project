@@ -54,3 +54,27 @@ def handle_missing_values(df):
     print(df.isnull().sum())
 
     return df
+
+def analyze_duplicates(df):
+    print("==========analyzing duplicates=============")
+    duplicate_mask = df.duplicated(keep=False)
+    duplicate_count = duplicate_mask.sum()
+    print(f"total duplicate records : {duplicate_count}")
+    if duplicate_count > 0:
+        print("duplicate records:")
+        print(df[duplicate_mask])
+    else:
+        print("no duplicate records")
+    return df
+
+def remove_duplicates(df):
+     initial_count = len(df)
+
+     df = df.drop_duplicates(keep="first")
+
+     final_count = len(df)
+
+     removed = initial_count - final_count
+
+     print(f"total removed duplicates : {removed}")
+     return df
