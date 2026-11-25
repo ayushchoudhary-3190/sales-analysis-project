@@ -78,3 +78,34 @@ def remove_duplicates(df):
 
      print(f"total removed duplicates : {removed}")
      return df
+
+
+def validate_data(df):
+    print("\n ============Validating values===============")
+
+    print("\n selecting numeric column values")
+    numeric_columns = df.select_dtypes(include = "number").columns
+
+    for col in numeric_columns:
+        negative_count = (df[col]<0).sum()
+        if negative_count > 0:
+            print(f"{col}: {negative_count} negative values")
+
+    for col in numeric_columns:
+        zero_count = (df[col] == 0).sum()
+        if zero_count > 0:
+            print(f"{col} : {zero_count} zero values")
+
+    for col in df.columns:
+        if "discount" in col.lower():
+            invalid_count = ((df[col]<0) | (df[col]>100)).sum()
+            print(f"{col}: {invalid_count} invalid discount values" ) 
+
+    for col in df.columns:
+        if "date" in col.lower():
+            converted_dates = pd.to_datetime(df[col],errors = "coerce")
+            invalid_dates = converted_dates.isna().sum()
+            print(f"{col}: {invalid_dates} invalid date count")
+
+    print("remaining duplicate values :",df.duplicated().sum())
+    return df
